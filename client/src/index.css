@@ -1,0 +1,110 @@
+@import '@lark-apaas/client-toolkit/lib/index.css';
+@import "tw-animate-css";
+@import "./tailwind-theme.css";
+@import "./typography.css";
+
+/* 全局背景不惨白 */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* 移动端 Arena Night 主题强制背景兜底 */
+:root[data-mobile-arena="true"] body {
+  background-color: #0A0E1A;
+}
+
+/* 顶部导航体育绿背景工具类 */
+.nav-gradient {
+  background-color: #0A8A4A;
+}
+
+/* 柔和卡片阴影（浅色主题） */
+.card-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ActionSheet 底部滑入动画 */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.25s ease-out forwards;
+}
+
+/* 标签徽章通用样式 */
+.badge-soft {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@config "../../tailwind.config.ts";
+
+/* 隐藏平台水印 */
+[class*="doubao"],
+[class*="watermark"],
+[class*="powered-by"],
+[class*="generated-by"],
+[id*="doubao"],
+[id*="watermark"],
+[id*="powered-by"],
+[id*="generated-by"],
+div[style*="fixed"][style*="bottom"][style*="right"],
+div[style*="position: fixed"][style*="bottom:"],
+div[style*="position:fixed"][style*="bottom:"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* 专业体育平台风格 - 全局工具类 */
+.card-sport {
+  @apply bg-white border border-border rounded-xl shadow-sm hover:shadow-md transition-shadow;
+}
+
+.badge-soft-primary {
+  @apply bg-primary/10 text-primary border border-primary/20 rounded-md px-1.5 py-0.5 text-[11px] font-medium;
+}
+
+.badge-soft-success {
+  @apply bg-success/10 text-success border border-success/20 rounded-md px-1.5 py-0.5 text-[11px] font-medium;
+}
+
+.badge-soft-warning {
+  @apply bg-warning/10 text-warning border border-warning/20 rounded-md px-1.5 py-0.5 text-[11px] font-medium;
+}
+
+.badge-soft-danger {
+  @apply bg-destructive/10 text-destructive border border-destructive/20 rounded-md px-1.5 py-0.5 text-[11px] font-medium;
+}
+
+.badge-soft-info {
+  @apply bg-info/10 text-info border border-info/20 rounded-md px-1.5 py-0.5 text-[11px] font-medium;
+}
+
+/* 空态统一样式 */
+.empty-state {
+  @apply flex flex-col items-center justify-center py-12 text-center;
+}
+
+.empty-state-icon {
+  @apply w-12 h-12 text-muted-foreground/30 mb-3;
+}

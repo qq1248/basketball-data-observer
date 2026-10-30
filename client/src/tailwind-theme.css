@@ -1,0 +1,612 @@
+@import url('https://miaoda.feishu.cn/fonts/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  --opaque-button-border-intensity: 8;
+
+  --background: #FAFAFA;
+  --foreground: #111827;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #8B0000;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #111827;
+  --muted: #F3F4F6;
+  --muted-foreground: #9CA3AF;
+  --accent: #8B0000;
+  --accent-foreground: #FFFFFF;
+  --info: #2563EB;
+  --info-foreground: #FFFFFF;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --success: #16A34A;
+  --success-foreground: #FFFFFF;
+  --warning: #D97706;
+  --warning-foreground: #111827;
+  --border: #F3F4F6;
+  --input: #F3F4F6;
+  --ring: #8B0000;
+
+  --chart-1: #8B0000;
+  --chart-2: #A52A2A;
+  --chart-3: #CD5C5C;
+  --chart-4: #E9967A;
+  --chart-5: #FFA07A;
+
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #8B0000;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FEF2F2;
+  --sidebar-accent-foreground: #8B0000;
+  --sidebar-border: #F3F4F6;
+  --sidebar-ring: #8B0000;
+
+  --primary-border: hsl(from #8B0000 h s calc(l + var(--opaque-button-border-intensity)));
+  --secondary-border: hsl(from #F3F4F6 h s calc(l + var(--opaque-button-border-intensity)));
+  --destructive-border: hsl(from #DC2626 h s calc(l + var(--opaque-button-border-intensity)));
+  --accent-border: hsl(from #8B0000 h s calc(l + var(--opaque-button-border-intensity)));
+  --muted-border: hsl(from #F3F4F6 h s calc(l + var(--opaque-button-border-intensity)));
+
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-serif: 'Inter', 'PingFang SC', 'Microsoft YaHei', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+
+  --radius: 12px;
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.06);
+  --shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 10px 24px -8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+
+  --football-green: #16A34A;
+  --basketball-orange: #CD5C5C;
+
+  --home-win: #8B0000;
+  --home-win-bg: #FEF2F2;
+  --draw-text: #9CA3AF;
+  --draw-bg: #F3F4F6;
+  --away-win: #6B7280;
+  --away-win-bg: #F3F4F6;
+  --hit-bg: #DCFCE7;
+  --miss-bg: #FEF2F2;
+  --miss-text: #DC2626;
+
+  --hero-dark: #1A0000;
+  --outlook-dark: #030712;
+  --footer-dark: #050505;
+  --growth-text: #16A34A;
+  --growth-bg: #DCFCE7;
+  --grid-line: #EEEEEE;
+  --axis-label: #999999;
+  --axis-label-alt: #666666;
+
+  --seq-1: #8B0000;
+  --seq-2: #A52A2A;
+  --seq-3: #CD5C5C;
+  --seq-4: #E9967A;
+  --seq-5: #FFA07A;
+}
+
+:root[data-theme="dark"] {
+  --opaque-button-border-intensity: -8;
+
+  --background: #050505;
+  --foreground: #F3F4F6;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #F3F4F6;
+  --popover: #111111;
+  --popover-foreground: #F3F4F6;
+  --primary: #8B0000;
+  --primary-foreground: #FFFFFF;
+  --secondary: rgba(255, 255, 255, 0.08);
+  --secondary-foreground: #F3F4F6;
+  --muted: rgba(255, 255, 255, 0.06);
+  --muted-foreground: #9CA3AF;
+  --accent: #8B0000;
+  --accent-foreground: #FFFFFF;
+  --info: #3B82F6;
+  --info-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --success: #22C55E;
+  --success-foreground: #FFFFFF;
+  --warning: #F59E0B;
+  --warning-foreground: #111827;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #8B0000;
+
+  --chart-1: #8B0000;
+  --chart-2: #A52A2A;
+  --chart-3: #CD5C5C;
+  --chart-4: #E9967A;
+  --chart-5: #FFA07A;
+
+  --sidebar: #050505;
+  --sidebar-foreground: #F3F4F6;
+  --sidebar-primary: #8B0000;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(139, 0, 0, 0.2);
+  --sidebar-accent-foreground: #F3F4F6;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #8B0000;
+
+  --primary-border: hsl(from #8B0000 h s calc(l + var(--opaque-button-border-intensity)));
+  --secondary-border: hsl(from #111111 h s calc(l + var(--opaque-button-border-intensity)));
+  --destructive-border: hsl(from #EF4444 h s calc(l + var(--opaque-button-border-intensity)));
+  --accent-border: hsl(from #8B0000 h s calc(l + var(--opaque-button-border-intensity)));
+  --muted-border: hsl(from #1A1A1A h s calc(l + var(--opaque-button-border-intensity)));
+
+  --football-green: #22C55E;
+  --basketball-orange: #CD5C5C;
+
+  --home-win: #DC2626;
+  --home-win-bg: rgba(220, 38, 38, 0.15);
+  --draw-text: #9CA3AF;
+  --draw-bg: rgba(255, 255, 255, 0.06);
+  --away-win: #9CA3AF;
+  --away-win-bg: rgba(255, 255, 255, 0.06);
+  --hit-bg: rgba(34, 197, 94, 0.15);
+  --miss-bg: rgba(239, 68, 68, 0.15);
+  --miss-text: #EF4444;
+
+  --hero-dark: #1A0000;
+  --outlook-dark: #030712;
+  --footer-dark: #050505;
+  --growth-text: #22C55E;
+  --growth-bg: rgba(34, 197, 94, 0.15);
+  --grid-line: rgba(255, 255, 255, 0.08);
+  --axis-label: rgba(255, 255, 255, 0.5);
+  --axis-label-alt: rgba(255, 255, 255, 0.7);
+}
+
+:root[data-mobile-arena="true"] {
+  --opaque-button-border-intensity: 8;
+
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+  --primary: #F97316;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #0F172A;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #F97316;
+  --accent-foreground: #FFFFFF;
+  --info: #3B82F6;
+  --info-foreground: #FFFFFF;
+  --destructive: #E11D48;
+  --destructive-foreground: #FFFFFF;
+  --success: #16A34A;
+  --success-foreground: #FFFFFF;
+  --warning: #F97316;
+  --warning-foreground: #FFFFFF;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #F97316;
+
+  --accent-primary: #F97316;
+  --accent-primary-light: #FB923C;
+  --accent-primary-dark: #EA580C;
+  --accent-primary-rgb: 249, 115, 22;
+  --accent-glow: rgba(249, 115, 22, 0.2);
+
+  --chart-1: #F97316;
+  --chart-2: #3B82F6;
+  --chart-3: #10B981;
+  --chart-4: #8B5CF6;
+  --chart-5: #EC4899;
+
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0F172A;
+  --sidebar-primary: #F97316;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FFF7ED;
+  --sidebar-accent-foreground: #F97316;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #F97316;
+
+  --primary-border: #FB923C;
+  --secondary-border: #E2E8F0;
+  --destructive-border: #E11D48;
+  --accent-border: #FB923C;
+  --muted-border: #CBD5E1;
+
+  --radius: 14px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 6px 16px -6px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 12px 32px -10px rgba(15, 23, 42, 0.12);
+  --shadow-xl: 0 20px 48px -16px rgba(15, 23, 42, 0.15);
+
+  --football-green: #16A34A;
+  --basketball-orange: #F97316;
+
+  --home-win: #EF4444;
+  --home-win-bg: #FEE2E2;
+  --draw-text: #64748B;
+  --draw-bg: #F1F5F9;
+  --away-win: #3B82F6;
+  --away-win-bg: #DBEAFE;
+  --total-over: #EA580C;
+  --total-under: #0D9488;
+  --hit-bg: #DCFCE7;
+  --miss-bg: #FEE2E2;
+  --miss-text: #DC2626;
+
+  --growth-text: #16A34A;
+  --growth-bg: #DCFCE7;
+  --grid-line: #E2E8F0;
+  --axis-label: #94A3B8;
+  --axis-label-alt: #64748B;
+
+  --seq-1: #F97316;
+  --seq-2: #FB923C;
+  --seq-3: #FDBA74;
+  --seq-4: #FED7AA;
+  --seq-5: #FFEDD5;
+}
+
+:root[data-mobile-arena="true"][data-accent-theme="light-orange"] {
+  --primary: #F97316;
+  --primary-foreground: #FFFFFF;
+  --accent: #F97316;
+  --accent-foreground: #FFFFFF;
+  --ring: #F97316;
+  --accent-primary: #F97316;
+  --accent-primary-light: #FB923C;
+  --accent-primary-dark: #EA580C;
+  --accent-primary-rgb: 249, 115, 22;
+  --accent-glow: rgba(249, 115, 22, 0.2);
+  --chart-1: #F97316;
+  --sidebar-primary: #F97316;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FFF7ED;
+  --sidebar-accent-foreground: #F97316;
+  --sidebar-ring: #F97316;
+  --primary-border: #FB923C;
+  --accent-border: #FB923C;
+  --seq-1: #F97316;
+  --basketball-orange: #F97316;
+}
+
+:root[data-mobile-arena="true"][data-accent-theme="light-emerald"] {
+  --primary: #10B981;
+  --primary-foreground: #FFFFFF;
+  --accent: #10B981;
+  --accent-foreground: #FFFFFF;
+  --ring: #10B981;
+  --accent-primary: #10B981;
+  --accent-primary-light: #34D399;
+  --accent-primary-dark: #059669;
+  --accent-primary-rgb: 16, 185, 129;
+  --accent-glow: rgba(16, 185, 129, 0.2);
+  --chart-1: #10B981;
+  --sidebar-primary: #10B981;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #ECFDF5;
+  --sidebar-accent-foreground: #10B981;
+  --sidebar-ring: #10B981;
+  --primary-border: #34D399;
+  --accent-border: #34D399;
+  --seq-1: #10B981;
+}
+
+:root[data-mobile-arena="true"][data-accent-theme="light-blue"] {
+  --primary: #3B82F6;
+  --primary-foreground: #FFFFFF;
+  --accent: #3B82F6;
+  --accent-foreground: #FFFFFF;
+  --ring: #3B82F6;
+  --accent-primary: #3B82F6;
+  --accent-primary-light: #60A5FA;
+  --accent-primary-dark: #2563EB;
+  --accent-primary-rgb: 59, 130, 246;
+  --accent-glow: rgba(59, 130, 246, 0.2);
+  --chart-1: #3B82F6;
+  --sidebar-primary: #3B82F6;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EFF6FF;
+  --sidebar-accent-foreground: #3B82F6;
+  --sidebar-ring: #3B82F6;
+  --primary-border: #60A5FA;
+  --accent-border: #60A5FA;
+  --seq-1: #3B82F6;
+  --away-win: #3B82F6;
+  --away-win-bg: #DBEAFE;
+}
+
+:root[data-mobile-arena="true"][data-accent-theme="dark-emerald"] {
+  --opaque-button-border-intensity: 8;
+
+  --background: #0B0F15;
+  --foreground: #F1F5F9;
+  --card: #141922;
+  --card-foreground: #F1F5F9;
+  --popover: #1A202C;
+  --popover-foreground: #F1F5F9;
+  --primary: #10B981;
+  --primary-foreground: #0B0F15;
+  --secondary: #1A202C;
+  --secondary-foreground: #F1F5F9;
+  --muted: rgba(16, 185, 129, 0.08);
+  --muted-foreground: #94A3B8;
+  --accent: #10B981;
+  --accent-foreground: #0B0F15;
+  --info: #60A5FA;
+  --info-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --success: #22C55E;
+  --success-foreground: #0B0F15;
+  --warning: #F59E0B;
+  --warning-foreground: #0B0F15;
+  --border: rgba(16, 185, 129, 0.08);
+  --input: rgba(16, 185, 129, 0.1);
+  --ring: #10B981;
+
+  --accent-primary: #10B981;
+  --accent-primary-light: #34D399;
+  --accent-primary-dark: #059669;
+  --accent-primary-rgb: 16, 185, 129;
+  --accent-glow: rgba(16, 185, 129, 0.25);
+
+  --chart-1: #10B981;
+  --chart-2: #F59E0B;
+  --chart-3: #22C55E;
+  --chart-4: #60A5FA;
+  --chart-5: #A78BFA;
+
+  --sidebar: #0B0F15;
+  --sidebar-foreground: #F1F5F9;
+  --sidebar-primary: #10B981;
+  --sidebar-primary-foreground: #0B0F15;
+  --sidebar-accent: rgba(16, 185, 129, 0.08);
+  --sidebar-accent-foreground: #F1F5F9;
+  --sidebar-border: rgba(16, 185, 129, 0.08);
+  --sidebar-ring: #10B981;
+
+  --primary-border: rgba(16, 185, 129, 0.18);
+  --secondary-border: rgba(16, 185, 129, 0.12);
+  --destructive-border: rgba(239, 68, 68, 0.2);
+  --accent-border: rgba(16, 185, 129, 0.2);
+  --muted-border: rgba(16, 185, 129, 0.06);
+
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 24px -8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 30px 60px -15px rgba(0, 0, 0, 0.7);
+
+  --football-green: #3FB950;
+  --basketball-orange: #F0883E;
+
+  --home-win: #F87171;
+  --home-win-bg: rgba(248, 113, 113, 0.15);
+  --draw-text: #8B949E;
+  --draw-bg: rgba(139, 148, 158, 0.1);
+  --away-win: #60A5FA;
+  --away-win-bg: rgba(96, 165, 250, 0.15);
+  --total-over: #FB923C;
+  --total-under: #2DD4BF;
+  --hit-bg: rgba(63, 185, 80, 0.15);
+  --miss-bg: rgba(248, 81, 73, 0.15);
+  --miss-text: #F85149;
+
+  --growth-text: #3FB950;
+  --growth-bg: rgba(63, 185, 80, 0.15);
+  --grid-line: rgba(232, 181, 74, 0.08);
+  --axis-label: rgba(139, 148, 158, 0.6);
+  --axis-label-alt: rgba(248, 250, 252, 0.7);
+
+  --seq-1: #10B981;
+  --seq-2: #F59E0B;
+  --seq-3: #22C55E;
+  --seq-4: #60A5FA;
+  --seq-5: #A78BFA;
+}
+
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-football-green: var(--football-green);
+  --color-basketball-orange: var(--basketball-orange);
+  --color-home-win: var(--home-win);
+  --color-home-win-bg: var(--home-win-bg);
+  --color-draw-text: var(--draw-text);
+  --color-draw-bg: var(--draw-bg);
+  --color-away-win: var(--away-win);
+  --color-away-win-bg: var(--away-win-bg);
+  --color-total-over: var(--total-over);
+  --color-total-under: var(--total-under);
+  --color-hit-bg: var(--hit-bg);
+  --color-miss-bg: var(--miss-bg);
+  --color-miss-text: var(--miss-text);
+
+  --color-hero-dark: var(--hero-dark);
+  --color-outlook-dark: var(--outlook-dark);
+  --color-footer-dark: var(--footer-dark);
+  --color-growth-text: var(--growth-text);
+  --color-growth-bg: var(--growth-bg);
+  --color-grid-line: var(--grid-line);
+  --color-axis-label: var(--axis-label);
+  --color-axis-label-alt: var(--axis-label-alt);
+
+  --color-seq-1: var(--seq-1);
+  --color-seq-2: var(--seq-2);
+  --color-seq-3: var(--seq-3);
+  --color-seq-4: var(--seq-4);
+  --color-seq-5: var(--seq-5);
+
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-primary-light: var(--accent-primary-light);
+  --color-accent-primary-dark: var(--accent-primary-dark);
+  --color-accent-glow: var(--accent-glow);
+
+  --color-nebula-crimson: #8B0000;
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: var(--muted-foreground);
+    pointer-events: none;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .bg-nebula-crimson {
+    background-color: #8B0000;
+  }
+  .text-nebula-crimson {
+    color: #8B0000;
+  }
+  .border-nebula-crimson {
+    border-color: #8B0000;
+  }
+
+  .eyebrow {
+    @apply text-[10px] font-black uppercase tracking-widest text-nebula-crimson;
+  }
+
+  .eyebrow-line::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2px;
+    background-color: #8B0000;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+  }
+
+  .metric-card {
+    @apply bg-white border border-gray-100 rounded-3xl transition-all duration-500;
+    box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.1);
+  }
+  .metric-card:hover {
+    box-shadow: 0 20px 60px -15px rgba(139, 0, 0, 0.2);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .product-card {
+    @apply bg-white rounded-3xl shadow-lg transition-all duration-500;
+    border-bottom: 12px solid #F3F4F6;
+  }
+  .product-card:hover {
+    transform: translateY(-1rem);
+    border-bottom-color: #8B0000;
+  }
+
+  .progress-gradient {
+    background: linear-gradient(to right, #7F1D1D, #8B0000);
+  }
+
+  .hero-dark-bg {
+    background-color: #1A0000;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(139, 0, 0, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(165, 42, 42, 0.3) 0%, transparent 50%);
+  }
+
+  .crimson-dots {
+    background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0);
+    background-size: 40px 40px;
+    opacity: 0.1;
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .emphasis-bar {
+    border-left: 4px solid #8B0000;
+  }
+}

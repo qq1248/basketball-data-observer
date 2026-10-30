@@ -1,0 +1,20 @@
+{
+  "name": "观察体育 · 赛事数据参考",
+  "short_name": "观察体育",
+  "description": "足球篮球赛事数据统计与参考平台",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAFAFA",
+  "theme_color": "#8B0000",
+  "icons": [
+    {
+      "src": "/spark/app/app_17e50w9zycw/runtime/api/v1/storage/object/bucket_aadkvczktxiku_static/static%2Faadk3odnkrkbs_ve_miaoda",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["sports", "productivity"],
+  "lang": "zh-CN"
+}
