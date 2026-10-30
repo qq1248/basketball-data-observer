@@ -1,0 +1,42 @@
+# 该工作流使用了未经过GitHub认证的操作。
+# 它们由第三方提供，并受其规则约束。
+# 独立的服务条款、隐私政策和支持说明
+# 文档。
+
+# 该工作流会先安装Deno，然后运行`deno lint`和`deno test`命令。
+# 更多信息请参见：https://github.com/denoland/setup-deno
+
+名称: Deno
+
+于：:
+  推动:
+分支: [“主要”]
+名称:
+分支: [“主要”]
+
+权限:
+  目录: 阅读
+
+工作:
+测试:
+    句子过长: ubuntu-latest
+
+    步骤:
+      - 名称: 设置仓库
+#   运行命令：deno fmt --check: actions/checkout@v4
+
+      - 名称: 设置Deno
+        # 使用方式：denoland/setup-deno@v1
+#   运行命令：deno fmt --check: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31  # 版本为1.1.2
+        与……一起:
+          deno版本: v1.x
+
+      # 取消此步骤的注释，即可验证每次提交时是否使用了‘deno fmt’。
+      # - 名称：验证格式
+      #   运行：deno fmt --check
+
+      - name: Run linter
+        run: deno lint
+
+      - name: Run tests
+        run: deno test -A
